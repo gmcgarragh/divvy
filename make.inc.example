@@ -1,0 +1,8 @@
+# C compiler and C compiler flags
+CC      = gcc
+CCFLAGS = -O2 -fopenmp
+
+# HDF4
+INCDIRS += -I${HOME}/opt/mpich/include
+LIBDIRS += -L${HOME}/opt/mpich/lib
+LINKS   += -lmpich
