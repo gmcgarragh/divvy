@@ -143,7 +143,7 @@ int main(int argc, char *argv[])
                  exit(0);
             }
             else {
-                 printf("Invalid option: %s, use -help for more information\n",
+                 printf("Invalid option: %s, use --help for more information\n",
                         argv[i]);
                  exit(1);
             }
@@ -155,7 +155,7 @@ int main(int argc, char *argv[])
     }
 
     if (n < 0) {
-        printf("Not enough arguments, use -help for more information\n");
+        printf("Not enough arguments, use --help for more information\n");
         exit(1);
     }
 
