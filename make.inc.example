@@ -2,7 +2,7 @@
 CC      = gcc
 CCFLAGS = -O2 -fopenmp
 
-# HDF4
+# MPICH
 INCDIRS += -I${HOME}/opt/mpich/include
 LIBDIRS += -L${HOME}/opt/mpich/lib
 LINKS   += -lmpich
