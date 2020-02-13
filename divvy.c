@@ -419,7 +419,7 @@ int execute_cmd(char *cmd)
     }
 
     if (status) {
-        fprintf(stderr, "ERROR: wait()\n");
+        fprintf(stderr, "ERROR: status = %d\n", status);
         return -1;
     }
 
