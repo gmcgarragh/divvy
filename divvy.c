@@ -11,6 +11,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 
 #include <unistd.h>
 #include <sys/wait.h>
@@ -73,9 +74,19 @@ int main(int argc, char *argv[])
 
     FILE *fp;
 
+    clock_t start_clock;
+    time_t  start_time;
+
     MPI_Status mpi_status;
 
     options_data options;
+
+
+    /*--------------------------------------------------------------------------
+     *
+     *------------------------------------------------------------------------*/
+    start_clock = clock();
+    start_time  = time(NULL);
 
 
     /*--------------------------------------------------------------------------
@@ -306,6 +317,9 @@ int main(int argc, char *argv[])
     for (i = 0; i < n_cmds; ++i)
         free(cmd_list[i]);
     free(cmd_list);
+
+
+    printf("Wall clock time: %.2f sec\n", difftime(time(NULL), start_time));
 
 
     exit(0);
