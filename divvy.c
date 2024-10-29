@@ -177,7 +177,7 @@ int main(int argc, char *argv[])
      *
      *------------------------------------------------------------------------*/
     if (options.mpi && mpi_size == 1) {
-        fprintf(stderr, "ERROR: Must use more than one process for option -mpi\n");
+        fprintf(stderr, "ERROR: Must use more than one process for option --mpi\n");
         MPI_Finalize();
         exit(0);
     }
